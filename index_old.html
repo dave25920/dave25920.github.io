@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--Copyright David Miller 2024-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WCPW Useful Tools</title>
+    <title>WCPW Road Name & Number Search</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         body {
@@ -23,23 +22,9 @@
         #result th {
             background-color: #f2f2f2;
         }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #007BFF;
-        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="pits.html">Pit Locations</a>
-        <a href="links.html">Useful Links</a>
-    </nav>
-
     <h1>Search Road Names</h1>
     <input type="text" id="searchField" placeholder="Enter road name" oninput="searchRoadName()">
     <table id="result"></table>
@@ -90,5 +75,4 @@
         }
     </script>
 </body>
-<!--Copyright David Miller 2024-->
 </html>

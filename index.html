@@ -1,94 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--Copyright David Miller 2024-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WCPW Useful Tools</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #result {
-            margin-top: 20px;
-            border-collapse: collapse;
-            width: 100%;
-        }
-        #result th, #result td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        #result th {
-            background-color: #f2f2f2;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #007BFF;
-        }
-    </style>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;url=https://wcpw.app">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="pits.html">Pit Locations</a>
-        <a href="links.html">Useful Links</a>
-    </nav>
-
-    <h1>Search Road Names</h1>
-    <input type="text" id="searchField" placeholder="Enter road name" oninput="searchRoadName()">
-    <table id="result"></table>
-
-    <script>
-        let roadData = [];
-
-        // Load the CSV file
-        Papa.parse('road_numbers.csv', {
-            download: true,
-            header: true,
-            complete: function(results) {
-                roadData = results.data;
-                console.log('CSV Data Loaded:', roadData); // Debug: Check if data is loaded correctly
-            }
-        });
-
-        function searchRoadName() {
-            const searchField = document.getElementById('searchField').value.trim().toLowerCase();
-            console.log('Search Term:', searchField); // Debug: Check the search term
-
-            const resultTable = document.getElementById('result');
-            resultTable.innerHTML = ''; // Clear previous results
-
-            // Filter data based on search criteria
-            const filteredData = roadData.filter(row => row.Road_Name && row.Road_Name.trim().toLowerCase().includes(searchField));
-            console.log('Filtered Data:', filteredData); // Debug: Check the filtered data
-
-            if (filteredData.length > 0) {
-                // Create table header
-                const headerRow = resultTable.insertRow();
-                Object.keys(filteredData[0]).forEach(key => {
-                    const cell = headerRow.insertCell();
-                    cell.outerHTML = `<th>${key}</th>`;
-                });
-
-                // Create table rows
-                filteredData.forEach(row => {
-                    const dataRow = resultTable.insertRow();
-                    Object.values(row).forEach(value => {
-                        const cell = dataRow.insertCell();
-                        cell.textContent = value;
-                    });
-                });
-            } else {
-                resultTable.innerHTML = '<tr><td colspan="100%">No results found</td></tr>';
-            }
-        }
-    </script>
+    <p>If you are not redirected automatically, follow this <a href="https://wcpw.app">link</a>.</p>
+    <h1>WCPW APP NEW HOME AT: WCPW.APP</h1>
 </body>
-<!--Copyright David Miller 2024-->
+<!-- Copyright David Miller 2024-->
 </html>
